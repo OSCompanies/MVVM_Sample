@@ -24,7 +24,8 @@ class MainArticleViewModel: NSObject {
     
     func fetchData(completion: @escaping () -> Void) {
         
-        let url = URL(string: "https://newsapi.org/v2/top-headlines?country=us&apiKey=e9b514c39c5f456db8ed4ecb693b0040")
+//        let url = URL(string: "https://newsapi.org/v2/top-headlines?country=us&apiKey=e9b514c39c5f456db8ed4ecb693b0040")
+        let url = URL(string: "https://newsapi.org/v2/everything?q=tesla&from=2021-05-15&sortBy=publishedAt&apiKey=e9b514c39c5f456db8ed4ecb693b0040")
         WebService().getArticles(url: url!) {
             (articles) in
             
